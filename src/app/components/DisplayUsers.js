@@ -1,6 +1,7 @@
 "use client"
 import { useDispatch, useSelector } from "react-redux"
 import { removeUser } from "../redux/slice"
+import Link from "next/link"
 
 export default function DisplayUsers() {
 
@@ -13,6 +14,7 @@ export default function DisplayUsers() {
     }
     return <>
         <h3>User displayed</h3>
+        <Link href={'/removeuser'}>Remove user</Link>
         {
             userData.map((item) => (
                 <>
