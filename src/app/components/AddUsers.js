@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 
 export default function AddUsers() {
     const [name, setName] = useState("");
+    //here userSelector hook is use to store data from redux store
     const dispatch = useDispatch();
     const buttonClicked = () => {
         dispatch(addUsers(name)) //passing the name data in addUser in redux slice
